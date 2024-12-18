@@ -1,0 +1,131 @@
+/* Основные стили */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+h4 {
+    margin: 20px 0 10px;
+}
+
+.menu-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+.order-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-form {
+    display: flex;
+    gap: 20px;
+}
+
+.left, .right {
+    width: 45%;
+}
+
+.customer-block, .order-block, .user-data-block, .comment-block {
+    margin-bottom: 20px;
+}
+
+.order-category {
+    margin-bottom: 10px;
+}
+
+.order-category h4 {
+    margin: 5px 0;
+}
+
+.order-block p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.customer-block h3, .order-block h3, .user-data-block h3, .comment-block label {
+    margin-top: 0;
+}
+
+.customer-block h3, .user-data-block h3 {
+    font-size: 18px;
+}
+
+.customer-block {
+    border-top: 2px solid #000;
+    padding-top: 10px;
+}
+
+.comment-block textarea {
+    width: 100%;
+    padding: 8px;
+}
+
+.user-data-block input[type="text"], .user-data-block input[type="email"], .user-data-block input[type="tel"], .user-data-block input[type="checkbox"], .user-data-block input[type="radio"] {
+    margin-bottom: 10px;
+    display: block;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
