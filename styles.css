@@ -1,133 +1,226 @@
-/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #ffffff;
+    font-size: 16px; /* Базовый размер шрифта */
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    padding: 1.25rem; /* Используем rem для отступов */
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
+    display: flex; /* Используем flex для размещения заголовка и навигации */
+    justify-content: space-between; /* Промежуток между заголовком и навигацией */
+    align-items: center ; /* Выравнивание по центру */
 }
 
-header h1 {
-    margin: 0;
+h1 {
+    font-size: 2rem; /* Размер шрифта заголовка по умолчанию */
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    display: flex; /* Начальное направление - горизонтальное */
+    gap: 1rem; /* Промежутки между пунктами навигации */
 }
 
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
+nav a {
     text-decoration: none;
+    color: rgb(133, 133, 133);
+    font-size: 1.125rem; /* 18px в rem */
+    padding: 0.3125rem 0.625rem; /* 5px 10px в rem */
 }
 
-nav ul li a.active {
-    text-decoration: underline;
+nav a.active, nav a:hover {
+    color: tomato;
 }
 
 main {
-    padding: 20px;
+    padding: 1.25rem; /* Используем rem для отступов */
 }
 
-h4 {
-    margin: 20px 0 10px;
+h2 {
+    text-align: left;
+    margin-bottom: 1.25rem; /* 20px в rem */
 }
 
 .menu-grid {
-    display: flex;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.625rem; /* 10px в rem */
 }
 
 .menu-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 150px;
-    text-align: center;
+    background-color: white;
+    padding: 2.5rem 1.875rem; /* 40px 30px в rem */
+    border-radius: 2.1875rem; /* 35px в rem */
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    text-align: left;
+    cursor: pointer;
 }
 
 .menu-item img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 2.1875rem;
+    width: 100%;
+    border-radius: 2.1875rem; /* 35px в rem */
 }
 
-.order-section {
-    display: flex;
-    justify-content: space-between;
+.price {
+    font-size: 1.25rem; /* 20px в rem */
+    margin: 0.625rem 0; /* 10px в rem */
 }
 
-.order-form {
-    display: flex;
-    gap: 20px;
+.name {
+    font-size: 1.125rem; /* 18px в rem */
+    margin: 0.625rem 0; /* 10px в rem */
 }
 
-.left, .right {
-    width: 45%;
+.weight {
+    color: gray;
 }
 
-.customer-block, .order-block, .user-data-block, .comment-block {
+button {
+    background-color: #f1eee9;
+    border: none;
+    padding: 0.625rem 1.875rem; /* 10px 30px в rem */
+    border-radius: 0.625rem; /* 10px в rem */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+h3{
+    text-align: left;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-.order-category {
-    margin-bottom: 10px;
+h4 {
+    text-align: center;
+    font-size: 2em;
 }
 
-.order-category h4 {
-    margin: 5px 0;
+body {
+    font-family: Arial, sans-serif;
 }
 
-.order-block p {
-    font-size: 16px;
-    font-weight: 400;
+.order-section {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+}  
+  
+.order-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+  
+.order-block, .customer-block {
+  width: 45%;
+}
+  
+.order-block h3, .customer-block h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+  
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+  
+select, input[type="text"], input[type="email"], input[type="tel"], input[type="time"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+  
+textarea {
+  height: 100px;
+}
+  
+button[type="submit"] {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+}
+  
+button[type="reset"] {
+  background-color: #f1eee9;
 }
 
-.customer-block h3, .order-block h3, .user-data-block h3, .comment-block label {
-    margin-top: 0;
+button:hover {
+  background-color: tomato;
+  color: white;
 }
-
-.customer-block h3, .user-data-block h3 {
-    font-size: 18px;
+  
+fieldset {
+  margin-bottom: 15px;
 }
-
-.customer-block {
-    border-top: 2px solid #000;
-    padding-top: 10px;
+  
+legend {
+  font-weight: bold;
 }
-
-.comment-block textarea {
-    width: 100%;
-    padding: 8px;
-}
-
-.user-data-block input[type="text"], .user-data-block input[type="email"], .user-data-block input[type="tel"], .user-data-block input[type="checkbox"], .user-data-block input[type="radio"] {
-    margin-bottom: 10px;
-    display: block;
-}
+  
 
 footer {
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    text-align: center;
+    text-align: left;
+    padding: 1.25rem; /* Используем rem для отступов */
+    background-color: #000000;
+    color: #fff;
 }
+
+/* Медиа-запрос для адаптивности при ширине экрана до 800px */
+@media (max-width: 800px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки на маленьких экранах */
+    }
+}
+
+/* Медиа-запрос для адаптивности при ширине экрана до 600px */
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* Одна колонка на очень маленьких экранах */
+    }
+
+    .header-content {
+        flex-direction: column; /* Изменяем направление на вертикальное */
+        align-items: center; /* Выравниваем по центру краю */
+    }
+
+    nav ul {
+        flex-direction: column; /* Меню теперь вертикальное */
+        gap: 0.625rem; /* Промежутки между пунктами навигации */
+        margin-top: 1rem; /* Отступ сверху */
+    }
+
+    nav a {
+        font-size: 1rem; /* Уменьшаем размер шрифта для навигации */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта заголовка для маленьких экранов */
+    }
+
+    .price, .name {
+        font-size: 1rem; /* Уменьшаем размер шрифта для цены и названия */
+    }
+}
+
